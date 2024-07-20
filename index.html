@@ -2,33 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/Favicon/Icon.png" type="image/x-icon">
-    <title>Temp-Calca</title>
-    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="Main">
-        <h1>Temperature converter</h1>
-        <form action="" onsubmit="Calculate() ; return false">
-            <div class="Box">
-                <input type="number" step="any" name="" id="Temp" placeholder="Input The Temperature">
-                <select name="Opt" id="Opt">
-                    <option value="Cal">Calcius &nbsp;</option>
-                    <option value="Far">Farenhiet &nbsp;</option>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <form id="converter-form">
+            <div class="input-group">
+                <input type="number" step="any" id="temp" placeholder="Input Temperature">
+                <select id="unit">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
                 </select>
             </div>
-            <button>&nbsp; Calculate &nbsp;</button>
+            <button type="submit">Calculate</button>
         </form>
-        <p id="Add">values to Calculate Temperature</p>
+        <p id="result">Enter values to calculate temperature</p>
     </div>
-    <h1 style="font-weight: 50px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Created by Prashant as web intern for Bharat Intern</h1>
-    <script src="Index.js"></script>
-    
+    <footer>
+        Created by Prashant 
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
+
