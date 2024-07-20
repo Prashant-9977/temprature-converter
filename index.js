@@ -1,26 +1,19 @@
-let Calculate=()=>
-{
-    let Val=document.getElementById('Temp').value;
-    
-    let Index=document.getElementById('Opt').selectedIndex;
-    
-    let FartoCal=(Val)=>
-    {
-        return Math.round((Val-32)/1.8);
-    }
-    let CaltoFar=()=>
-    {
-        return Math.round((1.8*Val)+32);
-    }
+document.getElementById('converter-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    calculateTemperature();
+});
 
-    if(Index==1)
-    {
-        let Ans=FartoCal(Val);
-        document.getElementById('Add').innerHTML=`The Temperature is ${Ans} Celcius`;
-    }
-    else
-    {
-        let Ans=CaltoFar(Val);
-        document.getElementById('Add').innerHTML=`The Temperature is ${Ans} Farenhiet`;
+function calculateTemperature() {
+    const temp = document.getElementById('temp').value;
+    const unit = document.getElementById('unit').value;
+    let result;
+
+    if (unit === 'celsius') {
+        result = (temp * 9/5) + 32;
+        document.getElementById('result').innerText = `The temperature is ${result.toFixed(2)} Fahrenheit`;
+    } else {
+        result = (temp - 32) * 5/9;
+        document.getElementById('result').innerText = `The temperature is ${result.toFixed(2)} Celsius`;
     }
 }
+
